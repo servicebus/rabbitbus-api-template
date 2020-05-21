@@ -1,10 +1,11 @@
 import log from 'llog'
 import errortrap from 'errortrap'
-import servicebus from 'servicebus-bus-common'
+import rabbitbus from '@servicebus/rabbitbus-common'
 import api from 'express-api-common'
 import { config } from '../config.mjs'
 import addTodoItem from '../routes/addTodoItem.mjs'
 
+const { makeBus } = rabbitbus
 // 🔥 Welcome to my opinionated servicebus boilerplate! 🔥
 
 // errortrap logs uncaught exceptions with llog before
@@ -31,7 +32,7 @@ export const start = async (onStart) => {
   // https://www.youtube.com/watch?v=4k7bLtqXb8c
   //
   log.info('connecting to servicebus')
-  const bus = await servicebus.makeBus(config.servicebus)
+  const bus = await makeBus(config.servicebus)
   log.info('connected to servicebus')
 
   // "express-api-common" simply creates an express server using commonly

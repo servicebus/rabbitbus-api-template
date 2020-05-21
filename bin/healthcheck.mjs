@@ -1,6 +1,8 @@
-import servicebus from 'servicebus-bus-common'
+import rabbitbus from '@servicebus/rabbitbus-common'
 import mongoClient from 'sourced-repo-mongo/mongo.js'
 import { config } from '../config.mjs'
+
+const { makeBus } = rabbitbus
 
 export const exit = ({ healthy = true } = {}) => {
   return healthy ? process.exit(0) : process.exit(1)
@@ -9,7 +11,7 @@ export const exit = ({ healthy = true } = {}) => {
 export const check = () => {
   return Promise.all([
     mongoClient.connect(config.sourced.mongo.url),
-    servicebus.makeBus(config.servicebus)
+    makeBus(config.servicebus)
   ])
 }
 

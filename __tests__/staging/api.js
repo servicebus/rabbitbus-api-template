@@ -1,7 +1,8 @@
 import r2 from 'r2'
 import debug from 'debug'
-import sbc from 'servicebus-bus-common'
+import rabbitbus from '@servicebus/rabbitbus-common'
 
+const { makeBus } = rabbitbus
 const log = debug('servicebus-microservice-api')
 
 const config = {
@@ -32,7 +33,7 @@ describe('api', () => {
 
   beforeAll(async function (done) {
     log('preparing for tests')
-    bus = await sbc.makeBus(config)
+    bus = await makeBus(config)
     done()
   })
 
