@@ -1,7 +1,7 @@
 import log from 'llog'
 import errortrap from 'errortrap'
 import rabbitbus from '@servicebus/rabbitbus-common'
-import api from 'express-api-common'
+import api from '@servicebus/express'
 import { config } from '../config.mjs'
 import addTodoItem from '../routes/addTodoItem.mjs'
 
@@ -35,7 +35,7 @@ export const start = async (onStart) => {
   const bus = await makeBus(config.servicebus)
   log.info('connected to servicebus')
 
-  // "express-api-common" simply creates an express server using commonly
+  // "@servicebus/express" simply creates an express server using commonly
   // used express middleware, such as prometheus exporters
   // for autoscaling purposes
   //

@@ -3,7 +3,7 @@ jest.mock('llog')
 jest.mock('errortrap', () => jest.fn())
 jest.mock('@servicebus/rabbitbus-common')
 jest.mock('../../../config.mjs')
-jest.mock('express-api-common', () => ({
+jest.mock('@servicebus/express', () => ({
   makeServer: jest.fn(() => ({
     get: jest.fn(),
     start: jest.fn(),
