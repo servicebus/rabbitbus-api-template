@@ -1,7 +1,7 @@
 {
-  "name": "servicebus-microservice-template",
+  "name": "@servicebus/rabbitbus-api-template",
   "version": "0.0.1",
-  "description": "servicebus-microservice-template",
+  "description": "@servicebus/rabbitbus-api-template",
   "bin": {
     "healthcheck": "./bin/healthcheck.mjs",
     "start": "./bin/start.mjs"
