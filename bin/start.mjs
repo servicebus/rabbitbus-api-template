@@ -1,5 +1,5 @@
 import log from 'llog'
-import errortrap from 'errortrap'
+import errortrap from '@servicebus/errortrap'
 import rabbitbus from '@servicebus/rabbitbus-common'
 import api from '@servicebus/express'
 import { config } from '../config.mjs'

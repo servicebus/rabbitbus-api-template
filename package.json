@@ -17,15 +17,16 @@
     "prepush": "make ci"
   },
   "dependencies": {
+    "@servicebus/errortrap": "0.0.7",
     "@servicebus/express": "1.0.1",
     "@servicebus/rabbitbus-common": "1.0.2",
     "@servicebus/register-handlers": "1.0.2",
     "bluebird": "3.7.2",
     "cconfig": "2.0.2",
-    "errortrap": "1.0.2",
     "joi": "14.3.1",
     "llog": "0.2.0",
     "pino": "6.2.1",
+    "readable-id-mjs": "1.0.0",
     "sourced": "2.0.6",
     "sourced-queued-repo": "1.0.3",
     "sourced-repo-mongo": "0.6.1"
@@ -43,9 +44,7 @@
     "eslint-plugin-standard": "4.0.1",
     "husky": "4.2.5",
     "jest": "26.0.1",
-    "json-stream-formatter": "0.0.9",
-    "r2": "2.0.1",
-    "readable-id-mjs": "1.0.0"
+    "r2": "2.0.1"
   },
   "license": "ISC",
   "snyk": true
