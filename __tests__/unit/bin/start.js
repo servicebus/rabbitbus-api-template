@@ -1,6 +1,6 @@
 import { start, onStart } from 'start.mjs'
 jest.mock('llog')
-jest.mock('errortrap', () => jest.fn())
+jest.mock('@servicebus/errortrap', () => jest.fn())
 jest.mock('@servicebus/rabbitbus-common')
 jest.mock('../../../config.mjs')
 jest.mock('@servicebus/express', () => ({
@@ -13,7 +13,7 @@ jest.mock('@servicebus/express', () => ({
 
 describe('./bin/start.mjs', () => {
   it('should start our add-todo-api', () => {
-    let errortrap = require('errortrap')
+    let errortrap = require('@servicebus/errortrap')
     let log = require('llog')
 
     start()
