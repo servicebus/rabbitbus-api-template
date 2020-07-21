@@ -25,7 +25,7 @@
     "cconfig": "2.0.2",
     "joi": "14.3.1",
     "llog": "0.2.0",
-    "pino": "6.4.0",
+    "pino": "6.4.1",
     "readable-id-mjs": "1.0.0",
     "sourced": "2.0.8",
     "sourced-queued-repo": "1.0.3",
