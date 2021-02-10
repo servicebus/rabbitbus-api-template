@@ -20,7 +20,7 @@
     "@servicebus/errortrap": "0.0.7",
     "@servicebus/express": "1.0.1",
     "@servicebus/rabbitbus-common": "1.0.2",
-    "@servicebus/register-handlers": "1.1.0",
+    "@servicebus/register-handlers": "1.1.1",
     "bluebird": "3.7.2",
     "cconfig": "2.0.2",
     "joi": "14.3.1",
